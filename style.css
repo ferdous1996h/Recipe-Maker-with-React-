@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+.headerG{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 0;
+  box-shadow: 0px 0px 5px 1px rgb(175, 172, 172);
+}
+
+.headerG h1{
+  font-weight: 500;
+}
+form{
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  gap: 15px;
+}
+input{
+  padding: 10px;
+  border-radius: 12px;
+  min-width: 500px;
+  border: 1px solid gray;
+  box-shadow: 0px 0px 1px 1px rgb(225, 215, 215); 
+}
+.form button{
+  background: black;
+  color: aliceblue;
+  padding: 10px 23px;
+  border-radius: 12px;
+  font-size: large;
+}
+.form button::before{
+  content: '+';
+  margin-right: 5px;
+}
+.bodyPart{
+  margin: 0 50px;
+  
+}
+li{
+  margin:15px 40px;
+  color: gray;
+}
+.submitCard{
+  display: flex;
+  justify-content: space-between;
+  background: #F0EFEB;
+  align-items: center;
+  padding: 25px;
+  border-radius: 14px;
+}
+.bottom button{
+  background: #C57A5E;
+  color: aliceblue;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  scale: 1.2;
+}
+.top{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.responseRecipe{
+  margin: 0 50px;
+  padding-top: 25px; 
+}
+.headres, .responseRecipe h3{
+  padding: 12px 0;
+}
