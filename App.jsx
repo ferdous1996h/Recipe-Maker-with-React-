@@ -25,7 +25,7 @@ export default function App() {
         cord: 'top',
       });
     }
-  });
+  },[response]);
   // Scroll view Section Added
 
   const listEle = ingrediArr.map((d, i) => <li key={i}>{d}</li>);
