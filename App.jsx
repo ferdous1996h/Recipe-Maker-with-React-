@@ -9,18 +9,37 @@ export default function App() {
     setIngrediArr(prev => [...prev, info]);
   }
 
-  const [response,setResponse]=useState(false)
+  const [response, setResponse] = useState(false);
 
-  function resC(){
-    setResponse(prev=>!prev)
+  function resC() {
+    setResponse(prev => !prev);
   }
+  // Scroll view Section Added
+  const recipeSection = React.useRef(null);
+  console.log(recipeSection);
 
-  const listEle = ingrediArr.map((d,i) => <li key={i}>{d}</li>);
+  React.useEffect(() => {
+    if (response && recipeSection.current) {
+      recipeSection.current.scrollIntoView({
+        behavior: 'smooth',
+        cord: 'top',
+      });
+    }
+  });
+  // Scroll view Section Added
+
+  const listEle = ingrediArr.map((d, i) => <li key={i}>{d}</li>);
   return (
     <>
       <Header />
-      <Form clk={grabItem} ingreC={ingrediArr} items={listEle} resC={resC}/>
-      {response && <ResponseRecipe/>}
+      <Form
+        clk={grabItem}
+        ingreC={ingrediArr}
+        items={listEle}
+        resC={resC}
+        ref={recipeSection}
+      />
+      {response && <ResponseRecipe />}
     </>
   );
 }

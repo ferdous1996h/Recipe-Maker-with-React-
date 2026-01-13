@@ -22,7 +22,7 @@ export default function Form(props) {
         ) : null}
 
         {props.ingreC.length > 3 && (
-          <div className="submitCard">
+          <div className="submitCard" ref={props.ref}>
             <div className="top">
               <h3>Ready for a recipe?</h3>
               <p>Generate a recipe from your list of ingredients.</p>
